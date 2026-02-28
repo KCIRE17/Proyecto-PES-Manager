@@ -1,0 +1,36 @@
+{
+    "perfiles": [
+        {
+            "nombre": "Erick",
+            "imagen_url": "",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Cesar",
+            "imagen_url": "",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Toño",
+            "imagen_url": "",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Rantes",
+            "imagen_url": "https://i.imgur.com/dDIPGlV.jpeg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "José",
+            "imagen_url": "https://i.postimg.cc/2S7fkM1N/Whats-App-Image-2026-02-17-at-11-56-44-AM.jpg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Fabio",
+            "imagen_url": "",
+            "historial_partidos": []
+        }
+    ],
+    "torneo_activo": null,
+    "historial": []
+}

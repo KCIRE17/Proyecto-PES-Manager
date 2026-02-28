@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/perfiles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="perfiles-container">
+    <div class="header-section">
+        <h1>Gestión de Participantes</h1>
+        <div class="counter-badge">
+            <span id="player-count">0</span> / 16 Jugadores
+        </div>
+    </div>
+
+    <div id="form-container" class="registration-card">
+        <h3>Registrar Nuevo Perfil</h3>
+        <div class="form-grid">
+            <div class="input-group">
+                <label>Nombre del Jugador</label>
+                <input type="text" id="nombre" placeholder="Ej: Erick Lares">
+            </div>
+            <div class="input-group">
+                <label>URL de Imagen (Avatar)</label>
+                <input type="text" id="imagen_url" placeholder="https://...">
+            </div>
+            <button id="btn-save" class="btn-primary" onclick="crearPerfil()">
+                <i class="fas fa-user-plus"></i> Guardar Perfil
+            </button>
+        </div>
+        <p id="msg-bloqueo" class="error-text" style="display: none;">
+            <i class="fas fa-lock"></i> No se pueden editar perfiles mientras hay un torneo activo.
+        </p>
+    </div>
+
+    <div id="perfiles-grid" class="perfiles-grid">
+        </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/api.js') }}"></script>
+<script src="{{ url_for('static', filename='js/perfiles.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,50 @@
+{
+    "perfiles": [
+        {
+            "nombre": "Erick",
+            "imagen_url": "https://i.postimg.cc/QMHyvLrz/ERICK.jpg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Cesar",
+            "imagen_url": "https://i.postimg.cc/25VKgpfM/CESAR.jpg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Toño",
+            "imagen_url": "https://i.postimg.cc/wB7GnKdG/TONO.jpg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Rantes",
+            "imagen_url": "https://i.imgur.com/dDIPGlV.jpeg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "José",
+            "imagen_url": "https://i.postimg.cc/k5BpLrdf/JOSE.jpg",
+            "historial_partidos": []
+        },
+        {
+            "nombre": "Fabio",
+            "imagen_url": "https://i.postimg.cc/3wdczMHs/DEFAULT.jpg",
+            "historial_partidos": []
+        }
+    ],
+    "torneo_activo": null,
+    "historial": [
+        {
+            "id": "4f339dcc-66cf-4e6f-81a8-5cc9752b23ec",
+            "nombre": "Copa Maracuchicha",
+            "ganador": "Desconocido",
+            "foto_1": "",
+            "equipo_1": "",
+            "subcampeon": "Desconocido",
+            "foto_2": "",
+            "participantes": 6,
+            "dia": "27",
+            "mes": "FEB",
+            "goles_totales": 0
+        }
+    ]
+}

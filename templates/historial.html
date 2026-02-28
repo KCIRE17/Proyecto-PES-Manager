@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/historial.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="historial-wrapper">
+    <header class="historial-header">
+        <h1><i class="fas fa-history"></i> Historial de Torneos</h1>
+        <p class="subtitle">Revive las glorias pasadas y estadísticas acumuladas</p>
+    </header>
+
+    <div class="stats-overview">
+        <div class="stat-card">
+            <span class="stat-value" id="total-tourneys">0</span>
+            <span class="stat-label">Torneos</span>
+        </div>
+        <div class="stat-card gold">
+            <span class="stat-value" id="top-winner">--</span>
+            <span class="stat-label">Máximo Ganador</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-value" id="total-goals">0</span>
+            <span class="stat-label">Goles Totales</span>
+        </div>
+    </div>
+
+    <div id="historial-container" class="tourney-list">
+        <div class="loader-container">
+            <i class="fas fa-circle-notch fa-spin"></i>
+            <p>Consultando archivos...</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/historial.js') }}"></script>
+{% endblock %}

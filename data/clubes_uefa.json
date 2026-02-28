@@ -1,0 +1,34 @@
+{
+  "clubes": [
+    { "id": "rma", "nombre": "Real Madrid", "pais": "España", "imagen": "/static/img/escudos/Real_Madrid_CF.svg.png" },
+    { "id": "fbc", "nombre": "FC Barcelona", "pais": "España", "imagen": "/static/img/escudos/FC_Barcelona.svg.png" },
+    { "id": "atm", "nombre": "Atlético de Madrid", "pais": "España", "imagen": "/static/img/escudos/atletico.png" },
+    { "id": "girona", "nombre": "Girona FC", "pais": "España", "imagen": "/static/img/escudos/Girona.svg.png" },
+    
+    { "id": "mci", "nombre": "Manchester City", "pais": "Inglaterra", "imagen": "/static/img/escudos/Manchester_City_FC.svg.png" },
+    { "id": "ars", "nombre": "Arsenal FC", "pais": "Inglaterra", "imagen": "/static/img/escudos/arsenal.png" },
+    { "id": "liv", "nombre": "Liverpool FC", "pais": "Inglaterra", "imagen": "/static/img/escudos/liverpool.png" },
+    { "id": "avl", "nombre": "Aston Villa", "pais": "Inglaterra", "imagen": "/static/img/escudos/aston_villa.png" },
+    
+    { "id": "bay", "nombre": "Bayern München", "pais": "Alemania", "imagen": "/static/img/escudos/bayern.png" },
+    { "id": "bvb", "nombre": "Borussia Dortmund", "pais": "Alemania", "imagen": "/static/img/escudos/dortmund.png" },
+    { "id": "lev", "nombre": "Bayer Leverkusen", "pais": "Alemania", "imagen": "/static/img/escudos/leverkusen.png" },
+    { "id": "rbl", "nombre": "RB Leipzig", "pais": "Alemania", "imagen": "/static/img/escudos/leipzig.png" },
+    
+    { "id": "int", "nombre": "Inter de Milán", "pais": "Italia", "imagen": "/static/img/escudos/inter.png" },
+    { "id": "mil", "nombre": "AC Milan", "pais": "Italia", "imagen": "/static/img/escudos/milan.png" },
+    { "id": "juv", "nombre": "Juventus", "pais": "Italia", "imagen": "/static/img/escudos/juventus.png" },
+    { "id": "ata", "nombre": "Atalanta", "pais": "Italia", "imagen": "/static/img/escudos/atalanta.png" },
+    
+    { "id": "psg", "nombre": "Paris Saint-Germain", "pais": "Francia", "imagen": "/static/img/escudos/psg.png" },
+    { "id": "mon", "nombre": "AS Monaco", "pais": "Francia", "imagen": "/static/img/escudos/monaco.png" },
+    { "id": "bre", "nombre": "Stade Brestois", "pais": "Francia", "imagen": "/static/img/escudos/brest.png" },
+    
+    { "id": "ben", "nombre": "SL Benfica", "pais": "Portugal", "imagen": "/static/img/escudos/benfica.png" },
+    { "id": "spo", "nombre": "Sporting CP", "pais": "Portugal", "imagen": "/static/img/escudos/sporting.png" },
+    { "id": "por", "nombre": "FC Porto", "pais": "Portugal", "imagen": "/static/img/escudos/porto.png" },
+    
+    { "id": "psv", "nombre": "PSV Eindhoven", "pais": "Países Bajos", "imagen": "/static/img/escudos/psv.png" },
+    { "id": "fey", "nombre": "Feyenoord", "pais": "Países Bajos", "imagen": "/static/img/escudos/feyenoord.png" }
+  ]
+}

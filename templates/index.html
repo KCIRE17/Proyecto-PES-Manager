@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="dashboard-header">
+    <h1>Bienvenido, Manager</h1>
+    <p>PES Champions League 2026 - Panel de Control</p>
+</div>
+
+<div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
+    <div class="card" style="background: var(--sidebar-color); padding: 20px; border-radius: 12px; border-left: 4px solid var(--accent-blue);">
+        <h3>Participantes</h3>
+        <p style="font-size: 2rem; font-weight: bold;">{{ stats.total_perfiles }} / 16</p>
+    </div>
+
+    <div class="card" style="background: var(--sidebar-color); padding: 20px; border-radius: 12px; border-left: 4px solid var(--accent-gold);">
+        <h3>Estado del Torneo</h3>
+        <p style="font-size: 1.2rem;">
+            {{ "En Curso 🔥" if stats.torneo_activo else "Sin Torneo Activo 💤" }}
+        </p>
+    </div>
+
+    <div class="card" style="background: var(--sidebar-color); padding: 20px; border-radius: 12px; border-left: 4px solid var(--success);">
+        <h3>Torneos Finalizados</h3>
+        <p style="font-size: 2rem; font-weight: bold;">{{ stats.total_historial }}</p>
+    </div>
+</div>
+{% endblock %}

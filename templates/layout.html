@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PES Champions Manager 2026</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block extra_css %}{% endblock %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-trophy trophy-icon"></i>
+                <h2 class="brand-name">PES MANAGER</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="/" class="nav-item">
+                    <i class="fas fa-chart-line"></i> <span>Dashboard</span>
+                </a>
+                <a href="/perfiles" class="nav-item">
+                    <i class="fas fa-users"></i> <span>Perfiles (Participantes)</span>
+                </a>
+                <a href="/nuevo-torneo" class="nav-item">
+                    <i class="fas fa-plus-circle"></i> <span>Nuevo Torneo</span>
+                </a>
+                <a href="/torneo-activo" class="nav-item">
+                    <i class="fas fa-gamepad"></i> <span>Torneo en Curso</span>
+                </a>
+                <a href="/historial" class="nav-item">
+                    <i class="fas fa-history"></i> <span>Historial / Revivir</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>UEFA Champions League 2026</p>
+                <small>v2.0 Senior Edition</small>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <div id="status-indicator" class="status-free">
+                    <i class="fas fa-check-circle"></i> Sistema Listo
+                </div>
+            </header>
+            
+            <section class="content-wrapper">
+                {% block content %}{% endblock %}
+            </section>
+        </main>
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

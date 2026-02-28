@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/torneos.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="setup-container">
+    <div class="setup-header-main">
+        <h1><i class="fas fa-trophy" style="color: var(--accent-gold); margin-right: 15px;"></i>Configuración de Nuevo Torneo</h1>
+        <input type="text" id="tournament-name" placeholder="Nombre de la Competición (Ej: Copa Maracuchicha 2026)" class="main-input-name">
+    </div>
+
+    <div id="step-1" class="setup-card">
+        <h3 style="margin-bottom: 20px;"><i class="fas fa-users"></i> 1. Selecciona la Modalidad</h3>
+        <div class="modalidad-grid">
+            <button class="btn-mode" onclick="setModalidad(6)">6 Jugadores</button>
+            <button class="btn-mode" onclick="setModalidad(8)">8 Jugadores</button>
+            <button class="btn-mode" onclick="setModalidad(10)">10 Jugadores</button>
+            <button class="btn-mode" onclick="setModalidad(16)">16 Jugadores</button>
+        </div>
+    </div>
+
+    <div id="step-2" class="setup-card" style="display: none; margin-top: 30px;">
+        <div class="setup-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 15px;">
+            <h3><i class="fas fa-random"></i> 2. Sorteo Manual y Clubes</h3>
+            <div class="setup-actions" style="display: flex; gap: 15px;">
+                <button class="btn-action btn-edit-style" onclick="sorteoAleatorio()">
+                    <i class="fas fa-dice"></i> Sorteo Aleatorio
+                </button>
+                <button id="btn-start-tournament" onclick="iniciarTorneo()">
+                    <i class="fas fa-play-circle"></i> ¡Empezar Competición!
+                </button>
+            </div>
+        </div>
+
+        <div class="draw-area">
+            <div class="available-players">
+                <h4 style="margin-bottom: 15px; color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                    Perfiles Disponibles
+                </h4>
+                <div id="pool-perfiles" class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    </div>
+            </div>
+
+            <div id="grupos-container" class="groups-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-club" class="modal">
+    <div class="modal-content">
+        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 style="color: white; margin: 0;">
+                Club para: <span id="player-target-name" style="color: var(--accent-gold);"></span>
+            </h2>
+            <button onclick="cerrarModal()" class="close-btn" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">
+                &times;
+            </button>
+        </div>
+        
+        <div class="search-box" style="position: relative; margin-bottom: 20px;">
+            <i class="fas fa-search" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted);"></i>
+            <input type="text" id="search-club" placeholder="Escribe el nombre de un equipo (Ej: Real Madrid)..." 
+                   onkeyup="filtrarClubes()" 
+                   style="width: 100%; padding: 15px 15px 15px 45px; background: var(--bg-dark); border: 1px solid #334155; border-radius: 10px; color: white;">
+        </div>
+
+        <div id="lista-clubes" class="club-selection-grid">
+            </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/torneo_setup.js') }}"></script>
+{% endblock %}
